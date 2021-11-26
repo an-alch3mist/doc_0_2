@@ -1,5 +1,5 @@
 
-#setComments
+# setComments
 
 
 ```php
@@ -92,11 +92,18 @@
 <br>
 <br>
 
-#getComments
+# getComments
 
 ```php
 
-function getComments()
+
+    $_server = "sql211.epizy.com";
+    $_username = "////////";
+    $_password = "///////";
+    $_dbname = "epiz_30350228_dn";
+    
+    
+    function getComments()
     {
         $server = $_server;
         $username = $_username;

@@ -154,10 +154,10 @@
     function _quote_str($str) { return '"' . $str . '"'; }
   
   
-    $_server = ;
-    $_username = ;
-    $_password = ;
-    $_dbname = ;
+    $_server = "sql211.epizy.com";
+    $_username = "un";
+    $_password = "";
+    $_dbname = "dn";
   
   
  

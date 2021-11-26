@@ -24,10 +24,10 @@
 
 
 ```php
- $_server = "sql211.epizy.com";
-    $_username = "un";
-    $_password = "";
-    $_dbname = "dn";
+    $_server = "sql211.epizy.com";
+    $_username = "////////";
+    $_password = "///////";
+    $_dbname = "epiz_30350228_dn";
   
   
  

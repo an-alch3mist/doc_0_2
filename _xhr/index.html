@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+    *
+    {
+        padding : 0px;
+        margin : 0px;
+        text-decoration : none;
+
+        font-family : monospace;     
+    }
+    body
+    {
+        text-size-adjust : 190%;
+
+        font-family : monospace;
+        font-weight : bold;
+        font-size : 0.95rem;
+        
+        line-height : 1rem;
+
+        
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>POST</h1>
+    <br>
+
+    <form class = "_BOX_1_">
+        <input type = "text" class = "_BOX_1_0_" name = "un">
+        <input type = "submit" value = "post"> 
+    </form>
+    <br>
+
+
+    <script>
+
+
+
+
+
+    document.querySelector("._BOX_1_").addEventListener("submit", postName);
+
+
+
+    function postName(e)
+    {
+        e.preventDefault();
+        
+
+        let un  = document.querySelector("._BOX_1_0_").value;
+        
+        let params = "un=" + un;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST" , "server.php" , true);
+        xhr.setRequestHeader("Content-type" , "application/x-www-form-urlencoded");
+
+        xhr.onload = function()
+        {
+            console.log(xhr.responseText);
+        }
+
+
+        xhr.send(params);
+    }
+
+
+
+    function post_somthng()
+    {
+        let un  = document.querySelector("._BOX_1_0_").value;
+        
+        let params = "un=" + un;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST" , "server.php" , true);
+        xhr.setRequestHeader("Content-type" , "application/x-www-form-urlencoded");
+
+        xhr.onload = function()
+        {
+            console.log(xhr.responseText);
+        }
+
+
+        xhr.send(params);
+    }
+    
+    setTimeout(setInterval(post_somthng, 5000) , 3000);
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

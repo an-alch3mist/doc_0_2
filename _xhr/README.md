@@ -139,14 +139,14 @@ $sql = <<<DVF
 DVF;
 
 
-/*"SELECT `id`, `un` FROM `tn_1` WHERE 1";*/
+/* "SELECT `id`, `un` FROM `tn_1` WHERE 1"; */
 
 
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
+if ( $result->num_rows > 0 ) {
+  /* output data of each row */
+  while( $row = $result->fetch_assoc() ) {
     echo "id: " . $row["id"]. " - un: " . $row["un"]. " " . "<br>";
   }
 } 

@@ -80,3 +80,53 @@ if(isset($un))
 
 
 ```
+
+<br><br><br>
+```php
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+```
+
+### update
+```php
+$t=time();
+$sql = <<<DVF
+    UPDATE `tn_1` 
+    SET `un`= "$t"
+    WHERE `id`= 1;
+
+DVF;
+
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+```
+   
+### insert
+```php
+$sql = <<<DVF
+    INSERT INTO `tn_1`(`un`) 
+    VALUES ("$un");
+DVF;
+
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+```
+
+
+```php
+$conn->close();
+```
+
+

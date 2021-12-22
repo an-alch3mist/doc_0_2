@@ -83,6 +83,29 @@ if(isset($un))
 
 <br><br><br><br>
 
+## sequence
+```php
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sql = <<<DVF
+
+DVF;
+
+$result = $conn->query($sql);
+
+/* insert... */
+/* update... */
+/* select... */
+while( $row = $result->fetch_assoc() ) 
+{
+   echo $row["id"]. " : " . $row["un"]. "<br>";
+}
+
+
+$conn->close();
+```
+
+
+<br><br>
 
 ```php
 // Create connection
